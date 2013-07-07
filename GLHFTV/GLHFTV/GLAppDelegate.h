@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class GLViewController;
+@class GLVideosCollectionViewController;
 
 @interface GLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) GLViewController *viewController;
+@property (strong, nonatomic) GLVideosCollectionViewController *viewController;
 
 @end

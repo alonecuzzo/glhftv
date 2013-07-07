@@ -1,5 +1,5 @@
 //
-//  GLViewController.h
+//  GLVideoCollectionViewCell.h
 //  GLHFTV
 //
 //  Created by Jabari Bell on 7/7/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GLViewController : UIViewController
+@interface GLVideoCollectionViewCell : UICollectionViewCell
 
 @end

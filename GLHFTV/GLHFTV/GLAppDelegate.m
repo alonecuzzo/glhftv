@@ -8,7 +8,7 @@
 
 #import "GLAppDelegate.h"
 
-#import "GLViewController.h"
+#import "GLVideosCollectionViewController.h"
 
 @implementation GLAppDelegate
 
@@ -16,7 +16,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[GLViewController alloc] initWithNibName:@"GLViewController" bundle:nil];
+    self.viewController = [[GLVideosCollectionViewController alloc] initWithNibName:@"GLVideosCollectionViewController" bundle:nil];
+//    self.viewController = [[GLVideosCollectionViewController alloc] init];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

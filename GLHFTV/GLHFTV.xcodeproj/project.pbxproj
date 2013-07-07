@@ -16,13 +16,15 @@
 		0C95721B1789FB2C0096CC71 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C95721A1789FB2C0096CC71 /* Default.png */; };
 		0C95721D1789FB2C0096CC71 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C95721C1789FB2C0096CC71 /* Default@2x.png */; };
 		0C95721F1789FB2C0096CC71 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C95721E1789FB2C0096CC71 /* Default-568h@2x.png */; };
-		0C9572221789FB2C0096CC71 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9572211789FB2C0096CC71 /* GLViewController.m */; };
-		0C9572251789FB2C0096CC71 /* GLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9572231789FB2C0096CC71 /* GLViewController.xib */; };
 		0C95722D1789FB2C0096CC71 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95722C1789FB2C0096CC71 /* SenTestingKit.framework */; };
 		0C95722E1789FB2C0096CC71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9572081789FB2C0096CC71 /* UIKit.framework */; };
 		0C95722F1789FB2C0096CC71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95720A1789FB2C0096CC71 /* Foundation.framework */; };
 		0C9572371789FB2C0096CC71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C9572351789FB2C0096CC71 /* InfoPlist.strings */; };
 		0C95723A1789FB2C0096CC71 /* GLHFTVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9572391789FB2C0096CC71 /* GLHFTVTests.m */; };
+		0C957249178A033A0096CC71 /* GLVideosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C957248178A033A0096CC71 /* GLVideosCollectionViewController.m */; };
+		0C95724F178A04F30096CC71 /* GLVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C95724E178A04F30096CC71 /* GLVideoCollectionViewCell.m */; };
+		0C957253178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C957252178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.m */; };
+		0C957255178A0B780096CC71 /* GLVideosCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C957254178A0B780096CC71 /* GLVideosCollectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,15 +51,19 @@
 		0C95721A1789FB2C0096CC71 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0C95721C1789FB2C0096CC71 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0C95721E1789FB2C0096CC71 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		0C9572201789FB2C0096CC71 /* GLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLViewController.h; sourceTree = "<group>"; };
-		0C9572211789FB2C0096CC71 /* GLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLViewController.m; sourceTree = "<group>"; };
-		0C9572241789FB2C0096CC71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GLViewController.xib; sourceTree = "<group>"; };
 		0C95722B1789FB2C0096CC71 /* GLHFTVTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLHFTVTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C95722C1789FB2C0096CC71 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0C9572341789FB2C0096CC71 /* GLHFTVTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GLHFTVTests-Info.plist"; sourceTree = "<group>"; };
 		0C9572361789FB2C0096CC71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C9572381789FB2C0096CC71 /* GLHFTVTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLHFTVTests.h; sourceTree = "<group>"; };
 		0C9572391789FB2C0096CC71 /* GLHFTVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLHFTVTests.m; sourceTree = "<group>"; };
+		0C957247178A033A0096CC71 /* GLVideosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLVideosCollectionViewController.h; path = GLHFTV/GLVideosCollectionViewController.h; sourceTree = "<group>"; };
+		0C957248178A033A0096CC71 /* GLVideosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLVideosCollectionViewController.m; path = GLHFTV/GLVideosCollectionViewController.m; sourceTree = "<group>"; };
+		0C95724D178A04F30096CC71 /* GLVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLVideoCollectionViewCell.h; path = GLHFTV/GLVideoCollectionViewCell.h; sourceTree = "<group>"; };
+		0C95724E178A04F30096CC71 /* GLVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLVideoCollectionViewCell.m; path = GLHFTV/GLVideoCollectionViewCell.m; sourceTree = "<group>"; };
+		0C957251178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLDefaultVideoCollectionViewLayout.h; path = GLHFTV/GLDefaultVideoCollectionViewLayout.h; sourceTree = "<group>"; };
+		0C957252178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLDefaultVideoCollectionViewLayout.m; path = GLHFTV/GLDefaultVideoCollectionViewLayout.m; sourceTree = "<group>"; };
+		0C957254178A0B780096CC71 /* GLVideosCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLVideosCollectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +123,11 @@
 		0C95720E1789FB2C0096CC71 /* GLHFTV */ = {
 			isa = PBXGroup;
 			children = (
+				0C957250178A081D0096CC71 /* Layouts */,
+				0C95724A178A04AD0096CC71 /* Views */,
+				0C957243178A02A80096CC71 /* View Controllers */,
 				0C9572171789FB2C0096CC71 /* GLAppDelegate.h */,
 				0C9572181789FB2C0096CC71 /* GLAppDelegate.m */,
-				0C9572201789FB2C0096CC71 /* GLViewController.h */,
-				0C9572211789FB2C0096CC71 /* GLViewController.m */,
-				0C9572231789FB2C0096CC71 /* GLViewController.xib */,
 				0C95720F1789FB2C0096CC71 /* Supporting Files */,
 			);
 			path = GLHFTV;
@@ -158,6 +164,50 @@
 				0C9572351789FB2C0096CC71 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C957243178A02A80096CC71 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C957254178A0B780096CC71 /* GLVideosCollectionViewController.xib */,
+				0C957247178A033A0096CC71 /* GLVideosCollectionViewController.h */,
+				0C957248178A033A0096CC71 /* GLVideosCollectionViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0C95724A178A04AD0096CC71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C95724C178A04C40096CC71 /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0C95724B178A04B40096CC71 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0C95724D178A04F30096CC71 /* GLVideoCollectionViewCell.h */,
+				0C95724E178A04F30096CC71 /* GLVideoCollectionViewCell.m */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		0C95724C178A04C40096CC71 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C95724B178A04B40096CC71 /* CollectionViewCells */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		0C957250178A081D0096CC71 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				0C957251178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.h */,
+				0C957252178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.m */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +286,7 @@
 				0C95721B1789FB2C0096CC71 /* Default.png in Resources */,
 				0C95721D1789FB2C0096CC71 /* Default@2x.png in Resources */,
 				0C95721F1789FB2C0096CC71 /* Default-568h@2x.png in Resources */,
-				0C9572251789FB2C0096CC71 /* GLViewController.xib in Resources */,
+				0C957255178A0B780096CC71 /* GLVideosCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +323,9 @@
 			files = (
 				0C9572151789FB2C0096CC71 /* main.m in Sources */,
 				0C9572191789FB2C0096CC71 /* GLAppDelegate.m in Sources */,
-				0C9572221789FB2C0096CC71 /* GLViewController.m in Sources */,
+				0C957249178A033A0096CC71 /* GLVideosCollectionViewController.m in Sources */,
+				0C95724F178A04F30096CC71 /* GLVideoCollectionViewCell.m in Sources */,
+				0C957253178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +354,6 @@
 				0C9572121789FB2C0096CC71 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0C9572231789FB2C0096CC71 /* GLViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0C9572241789FB2C0096CC71 /* en */,
-			);
-			name = GLViewController.xib;
 			sourceTree = "<group>";
 		};
 		0C9572351789FB2C0096CC71 /* InfoPlist.strings */ = {
