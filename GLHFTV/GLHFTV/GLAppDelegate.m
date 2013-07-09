@@ -12,6 +12,7 @@
 #import <DDTTYLogger.h>
 #import <DDFileLogger.h>
 #import "GLColorHelper.h"
+#import "GLCustomFormatter.h"
 
 #import "GLVideosCollectionViewController.h"
 
@@ -27,6 +28,7 @@
     [[DDTTYLogger sharedInstance] setForegroundColor:[GLColorHelper glProtossYellow] backgroundColor:nil forFlag:LOG_FLAG_WARN];
     [[DDTTYLogger sharedInstance] setForegroundColor:[GLColorHelper glZergPurple] backgroundColor:nil forFlag:LOG_FLAG_INFO];
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:nil forFlag:LOG_FLAG_VERBOSE];
+    [[DDTTYLogger sharedInstance] setLogFormatter:[[GLCustomFormatter alloc] init]];
     
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
     fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
