@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C48BFF9178BAA0E00D262FC /* GLColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C48BFF8178BAA0E00D262FC /* GLColorHelper.m */; };
 		0C9572091789FB2C0096CC71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9572081789FB2C0096CC71 /* UIKit.framework */; };
 		0C95720B1789FB2C0096CC71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95720A1789FB2C0096CC71 /* Foundation.framework */; };
 		0C95720D1789FB2C0096CC71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95720C1789FB2C0096CC71 /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C48BFF7178BAA0E00D262FC /* GLColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLColorHelper.h; path = GLHFTV/GLColorHelper.h; sourceTree = "<group>"; };
+		0C48BFF8178BAA0E00D262FC /* GLColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLColorHelper.m; path = GLHFTV/GLColorHelper.m; sourceTree = "<group>"; };
 		0C9572051789FB2C0096CC71 /* GLHFTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLHFTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9572081789FB2C0096CC71 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0C95720A1789FB2C0096CC71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C48BFF5178BA89700D262FC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0C48BFF6178BA9F200D262FC /* Colors */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		0C48BFF6178BA9F200D262FC /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				0C48BFF7178BAA0E00D262FC /* GLColorHelper.h */,
+				0C48BFF8178BAA0E00D262FC /* GLColorHelper.m */,
+			);
+			name = Colors;
+			sourceTree = "<group>";
+		};
 		0C9571FC1789FB2C0096CC71 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +143,7 @@
 		0C95720E1789FB2C0096CC71 /* GLHFTV */ = {
 			isa = PBXGroup;
 			children = (
+				0C48BFF5178BA89700D262FC /* Constants */,
 				0C957250178A081D0096CC71 /* Layouts */,
 				0C95724A178A04AD0096CC71 /* Views */,
 				0C957243178A02A80096CC71 /* View Controllers */,
@@ -326,6 +347,7 @@
 				0C957249178A033A0096CC71 /* GLVideosCollectionViewController.m in Sources */,
 				0C95724F178A04F30096CC71 /* GLVideoCollectionViewCell.m in Sources */,
 				0C957253178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.m in Sources */,
+				0C48BFF9178BAA0E00D262FC /* GLColorHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +520,7 @@
 				0C95723F1789FB2C0096CC71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C9572401789FB2C0096CC71 /* Build configuration list for PBXNativeTarget "GLHFTVTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +529,7 @@
 				0C9572421789FB2C0096CC71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

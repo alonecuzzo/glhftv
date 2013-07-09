@@ -7,6 +7,7 @@
 //
 
 #import "GLVideoCollectionViewCell.h"
+#import "GLColorHelper.h"
 
 @implementation GLVideoCollectionViewCell
 
@@ -15,7 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [GLColorHelper glTerranRed];
     }
     return self;
 }

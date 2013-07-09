@@ -9,6 +9,7 @@
 #import "GLVideosCollectionViewController.h"
 #import "GLVideoCollectionViewCell.h"
 #import "GLDefaultVideoCollectionViewLayout.h"
+#import "GLColorHelper.h"
 
 static NSString *const VideoCellIdentifier = @"VideoCell";
 
@@ -34,7 +35,7 @@ static NSString *const VideoCellIdentifier = @"VideoCell";
     
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor purpleColor];
-    
+    self.collectionView.backgroundColor = [GLColorHelper glBlack];
     [self.collectionView registerClass:[GLVideoCollectionViewCell class] forCellWithReuseIdentifier:VideoCellIdentifier];
 }
 
@@ -48,12 +49,12 @@ static NSString *const VideoCellIdentifier = @"VideoCell";
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 10;
+    return 1;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return 50;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
