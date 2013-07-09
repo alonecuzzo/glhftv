@@ -6,12 +6,21 @@
 //  Copyright (c) 2013 23bit. All rights reserved.
 //
 
+#import <DDLog.h>
+
 #import "GLVideosCollectionViewController.h"
 #import "GLVideoCollectionViewCell.h"
 #import "GLDefaultVideoCollectionViewLayout.h"
 #import "GLColorHelper.h"
 
+
 static NSString *const VideoCellIdentifier = @"VideoCell";
+
+#ifdef DEBUG
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+static const int ddLogLevel = LOG_LEVEL_WARN;
+#endif
 
 @interface GLVideosCollectionViewController ()
 @property (nonatomic, weak) IBOutlet GLDefaultVideoCollectionViewLayout *videoCollectionLayout;
@@ -32,6 +41,11 @@ static NSString *const VideoCellIdentifier = @"VideoCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    DDLogError(@"LOLZ AN ERROR");
+    DDLogInfo(@"SOME INFO");
+    DDLogWarn(@"A WARNING");
+    DDLogVerbose(@"VERBOSE");
     
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor purpleColor];
