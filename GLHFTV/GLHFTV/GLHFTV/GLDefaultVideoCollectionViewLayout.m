@@ -17,6 +17,8 @@ static NSString *const GLVideoCollectionViewCellType = @"VideoCollectionCell";
 
 @end
 
+static int const ddLogLevel = LOG_LEVEL_VERBOSE;
+
 @implementation GLDefaultVideoCollectionViewLayout
 
 #pragma mark - Lifecycle
@@ -53,21 +55,35 @@ static NSString *const GLVideoCollectionViewCellType = @"VideoCollectionCell";
 
 - (CGRect)frameForVideoCellAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger row = indexPath.section / self.numberOfColumns;
-    NSInteger column = indexPath.section % self.numberOfColumns;
+//    NSInteger row = indexPath.section / self.numberOfColumns;
+//    NSInteger column = indexPath.section % self.numberOfColumns;
+//    
+//    CGFloat spacingX = self.collectionView.bounds.size.width -
+//    self.itemInsets.left -
+//    self.itemInsets.right -
+//    (self.numberOfColumns * self.itemSize.width);
+//    
+//    if (self.numberOfColumns > 1) spacingX = spacingX / (self.numberOfColumns - 1);
+//    
+//    CGFloat originX = floorf(self.itemInsets.left + (self.itemSize.width + spacingX) * column);
+//
+    int sectionOffset = 0;
+    DDLogVerbose(@"section: %d", indexPath.section);
+    if (indexPath.section > 0) {
+        for (int i = 1; i < self.collectionView.numberOfSections; i++) {
+            if ((indexPath.section - i) >= 0) {
+                sectionOffset += [self.collectionView numberOfItemsInSection:indexPath.section-i];
+            }
+        }
+    }
     
-    CGFloat spacingX = self.collectionView.bounds.size.width -
-    self.itemInsets.left -
-    self.itemInsets.right -
-    (self.numberOfColumns * self.itemSize.width);
-    
-    if (self.numberOfColumns > 1) spacingX = spacingX / (self.numberOfColumns - 1);
-    
-    CGFloat originX = floorf(self.itemInsets.left + (self.itemSize.width + spacingX) * column);
+    DDLogVerbose(@"section offset: %d", sectionOffset);
     
     CGFloat originY = floor(self.itemInsets.top +
-                            (self.itemSize.height + self.interItemSpacingY) * row);
-    
+                            (self.itemSize.height + self.interItemSpacingY) * (indexPath.row + sectionOffset));
+
+    CGFloat originX = kInset;
+
     return CGRectMake(originX, originY, self.itemSize.width, self.itemSize.height);
 }
 
@@ -123,13 +139,15 @@ static NSString *const GLVideoCollectionViewCellType = @"VideoCollectionCell";
 
 - (CGSize)collectionViewContentSize
 {
-    NSInteger rowCount = [self.collectionView numberOfSections] / self.numberOfColumns;
-    //  hacer   sure we count another row if one is  sólo partially filled
-    if ([self.collectionView numberOfSections] % self.numberOfColumns) rowCount++;
+    NSInteger rowCount = 0;
     
-    CGFloat height = self.itemInsets.top +
-    rowCount * self.itemSize.height + (rowCount - 1) * self.interItemSpacingY +
-    self.itemInsets.bottom;
+    for (int i = 0; i < [self.collectionView numberOfSections]; i++) {
+        for (int j = 0; j < [self.collectionView numberOfItemsInSection:i]; j++) {
+            rowCount++;
+        }
+    }
+    
+    CGFloat height = self.itemInsets.top + (rowCount * (self.interItemSpacingY + self.itemSize.height)) + self.itemInsets.bottom;
     
     return CGSizeMake(self.collectionView.bounds.size.width, height);
 }
