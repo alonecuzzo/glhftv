@@ -6,21 +6,43 @@
 //  Copyright (c) 2013 23bit. All rights reserved.
 //
 
-#import "GLAppDelegate.h"
-#import <CocoaLumberjack/DDLog.h>
 #import <DDASLLogger.h>
 #import <DDTTYLogger.h>
 #import <DDFileLogger.h>
+#import <CocoaLumberjack/DDLog.h>
+
+#import "GLAppDelegate.h"
 #import "GLColorHelper.h"
 #import "GLCustomFormatter.h"
-
 #import "GLVideosCollectionViewController.h"
 
-@implementation GLAppDelegate
+#import <HTTPServer.h>
+#import "MyHTTPConnection.h"
+
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
+@implementation GLAppDelegate {
+    HTTPServer *httpServer;
+    DDFileLogger *_fileLogger;
+}
+
+- (void)setupWebServer
+{
+    httpServer = [[HTTPServer alloc] init];
+    [httpServer setConnectionClass:[MyHTTPConnection class]];
+    [httpServer setType:@"_http._tcp."];
+    [httpServer setPort:12345];
+    NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Web"];
+    [httpServer setDocumentRoot:webPath];
+    
+    NSError *error = nil;
+    if (![httpServer start:&error]) {
+        DDLogError(@"Error starting HTTP Server");
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
@@ -28,18 +50,22 @@
     [[DDTTYLogger sharedInstance] setForegroundColor:[GLColorHelper glProtossYellow] backgroundColor:nil forFlag:LOG_FLAG_WARN];
     [[DDTTYLogger sharedInstance] setForegroundColor:[GLColorHelper glZergPurple] backgroundColor:nil forFlag:LOG_FLAG_INFO];
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:nil forFlag:LOG_FLAG_VERBOSE];
-    [[DDTTYLogger sharedInstance] setLogFormatter:[[GLCustomFormatter alloc] init]];
+//    [[DDTTYLogger sharedInstance] setLogFormatter:[[GLCustomFormatter alloc] init]];
     
-    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
-    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-    [DDLog addLogger:fileLogger];
+    _fileLogger = [[DDFileLogger alloc] init];
+    _fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    _fileLogger.logFileManager.maximumNumberOfLogFiles = 4;
+    [DDLog addLogger:_fileLogger];
+    
+    [self setupWebServer];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[GLVideosCollectionViewController alloc] initWithNibName:@"GLVideosCollectionViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

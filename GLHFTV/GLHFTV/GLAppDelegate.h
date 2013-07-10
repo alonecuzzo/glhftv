@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <DDFileLogger.h>
 
 @class GLVideosCollectionViewController;
 
@@ -15,5 +16,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) GLVideosCollectionViewController *viewController;
+
+@property (nonatomic, readonly) DDFileLogger *fileLogger;
 
 @end

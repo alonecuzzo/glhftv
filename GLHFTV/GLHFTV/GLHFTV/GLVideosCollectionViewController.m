@@ -77,4 +77,9 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    DDLogInfo(@"pressed something");
+}
+
 @end
