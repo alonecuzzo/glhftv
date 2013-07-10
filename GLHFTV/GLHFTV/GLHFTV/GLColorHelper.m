@@ -30,4 +30,14 @@
     return [UIColor colorWithRed:1/255.0f green:0/255.0f blue:2/255.0f alpha:1.0f]; //010002
 }
 
++(UIColor*)glVideoFeedCellGray
+{
+    return [UIColor colorWithRed:40/255.0f green:34/255.0f blue:32/255.0f alpha:1.0f]; //282220
+}
+
++(UIColor*)glVideoFeedCellBackgroundGray
+{
+    return [UIColor colorWithRed:54/255.0f green:47/255.0f blue:45/255.0f alpha:1.0f]; //362f2d
+}
+
 @end

@@ -51,7 +51,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor purpleColor];
-    self.collectionView.backgroundColor = [GLColorHelper glBlack];
+    self.collectionView.backgroundColor = [GLColorHelper glVideoFeedCellBackgroundGray];
     [self.collectionView registerClass:[GLVideoCollectionViewCell class] forCellWithReuseIdentifier:VideoCellIdentifier];
 }
 
@@ -65,12 +65,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return 10;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 50;
+    return 5;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -83,5 +83,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     DDLogInfo(@"I LOVE YOU!");
 }
+
 
 @end

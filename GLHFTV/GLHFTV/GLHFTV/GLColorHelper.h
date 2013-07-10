@@ -18,4 +18,7 @@
 
 +(UIColor*)glBlack;
 
++(UIColor*)glVideoFeedCellGray;
++(UIColor*)glVideoFeedCellBackgroundGray;
+
 @end

@@ -16,7 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [GLColorHelper glProtossYellow];
+        self.backgroundColor = [GLColorHelper glVideoFeedCellGray];
     }
     return self;
 }

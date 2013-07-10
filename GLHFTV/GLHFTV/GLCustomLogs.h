@@ -15,5 +15,4 @@
 
 #define DDLogVideo(frmt, ...) ASYNC_LOG_OBJC_MAYBE(ddLogLevel, LOG_FLAG_VIDEO, 0, frmt, ##__VA_ARGS__)
 
-
 #define LOG_FLAG_VIDEOS (LOG_FLAG_VIDEO)

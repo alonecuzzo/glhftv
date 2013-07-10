@@ -7,6 +7,7 @@
 //
 
 #import "GLDefaultVideoCollectionViewLayout.h"
+#import "Globals.h"
 
 static NSString *const GLVideoCollectionViewCellType = @"VideoCollectionCell";
 
@@ -42,10 +43,10 @@ static NSString *const GLVideoCollectionViewCellType = @"VideoCollectionCell";
 
 - (void)setup
 {
-    self.itemInsets = UIEdgeInsetsMake(22.0f, 22.0f, 13.0f, 22.0f);
-    self.itemSize = CGSizeMake(125.0f, 125.0f);
+    self.itemInsets = UIEdgeInsetsMake(kInset, kInset, kInset, kInset);
+    self.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - kInset * 2, 125.0f);
     self.interItemSpacingY = 12.0f;
-    self.numberOfColumns = 2;
+    self.numberOfColumns = 1;
 }
 
 #pragma mark - Private

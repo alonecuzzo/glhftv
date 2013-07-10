@@ -11,6 +11,7 @@
 		0C23905D178D094C005205A3 /* WebSocketLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23905B178D094C005205A3 /* WebSocketLogger.m */; };
 		0C239060178D1154005205A3 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 0C23905F178D1154005205A3 /* Web */; };
 		0C3553A1178DB28C00205835 /* GLCustomLogs.h in Sources */ = {isa = PBXBuildFile; fileRef = 0C3553A0178DB13800205835 /* GLCustomLogs.h */; };
+		0C3553A5178DED1F00205835 /* Globals.h in Sources */ = {isa = PBXBuildFile; fileRef = 0C3553A4178DECFA00205835 /* Globals.h */; };
 		0C48BFF9178BAA0E00D262FC /* GLColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C48BFF8178BAA0E00D262FC /* GLColorHelper.m */; };
 		0C9572091789FB2C0096CC71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9572081789FB2C0096CC71 /* UIKit.framework */; };
 		0C95720B1789FB2C0096CC71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95720A1789FB2C0096CC71 /* Foundation.framework */; };
@@ -52,6 +53,7 @@
 		0C23905B178D094C005205A3 /* WebSocketLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocketLogger.m; sourceTree = "<group>"; };
 		0C23905F178D1154005205A3 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
 		0C3553A0178DB13800205835 /* GLCustomLogs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLCustomLogs.h; sourceTree = "<group>"; };
+		0C3553A4178DECFA00205835 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		0C48BFF7178BAA0E00D262FC /* GLColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLColorHelper.h; path = GLHFTV/GLColorHelper.h; sourceTree = "<group>"; };
 		0C48BFF8178BAA0E00D262FC /* GLColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLColorHelper.m; path = GLHFTV/GLColorHelper.m; sourceTree = "<group>"; };
 		0C9572051789FB2C0096CC71 /* GLHFTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLHFTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,12 +140,29 @@
 			name = "Custom Loggers";
 			sourceTree = "<group>";
 		};
-		0C48BFF5178BA89700D262FC /* Constants */ = {
+		0C3553A2178DE7DD00205835 /* Text */ = {
 			isa = PBXGroup;
 			children = (
-				0C48BFF6178BA9F200D262FC /* Colors */,
+			);
+			name = Text;
+			sourceTree = "<group>";
+		};
+		0C3553A3178DECE000205835 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0C3553A4178DECFA00205835 /* Globals.h */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		0C48BFF5178BA89700D262FC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0C3553A3178DECE000205835 /* Constants */,
+				0C3553A2178DE7DD00205835 /* Text */,
+				0C48BFF6178BA9F200D262FC /* Colors */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		0C48BFF6178BA9F200D262FC /* Colors */ = {
@@ -191,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA03E6D178CA4E90022B175 /* Log */,
-				0C48BFF5178BA89700D262FC /* Constants */,
+				0C48BFF5178BA89700D262FC /* Helpers */,
 				0C957250178A081D0096CC71 /* Layouts */,
 				0C95724A178A04AD0096CC71 /* Views */,
 				0C957243178A02A80096CC71 /* View Controllers */,
@@ -443,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3553A5178DED1F00205835 /* Globals.h in Sources */,
 				0C3553A1178DB28C00205835 /* GLCustomLogs.h in Sources */,
 				0C9572151789FB2C0096CC71 /* main.m in Sources */,
 				0C9572191789FB2C0096CC71 /* GLAppDelegate.m in Sources */,
