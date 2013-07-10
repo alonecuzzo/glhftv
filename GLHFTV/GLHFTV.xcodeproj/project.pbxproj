@@ -10,6 +10,7 @@
 		0C23905C178D094C005205A3 /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C239059178D094C005205A3 /* MyHTTPConnection.m */; };
 		0C23905D178D094C005205A3 /* WebSocketLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23905B178D094C005205A3 /* WebSocketLogger.m */; };
 		0C239060178D1154005205A3 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 0C23905F178D1154005205A3 /* Web */; };
+		0C3553A1178DB28C00205835 /* GLCustomLogs.h in Sources */ = {isa = PBXBuildFile; fileRef = 0C3553A0178DB13800205835 /* GLCustomLogs.h */; };
 		0C48BFF9178BAA0E00D262FC /* GLColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C48BFF8178BAA0E00D262FC /* GLColorHelper.m */; };
 		0C9572091789FB2C0096CC71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9572081789FB2C0096CC71 /* UIKit.framework */; };
 		0C95720B1789FB2C0096CC71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95720A1789FB2C0096CC71 /* Foundation.framework */; };
@@ -50,6 +51,7 @@
 		0C23905A178D094C005205A3 /* WebSocketLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocketLogger.h; sourceTree = "<group>"; };
 		0C23905B178D094C005205A3 /* WebSocketLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocketLogger.m; sourceTree = "<group>"; };
 		0C23905F178D1154005205A3 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
+		0C3553A0178DB13800205835 /* GLCustomLogs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLCustomLogs.h; sourceTree = "<group>"; };
 		0C48BFF7178BAA0E00D262FC /* GLColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLColorHelper.h; path = GLHFTV/GLColorHelper.h; sourceTree = "<group>"; };
 		0C48BFF8178BAA0E00D262FC /* GLColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLColorHelper.m; path = GLHFTV/GLColorHelper.m; sourceTree = "<group>"; };
 		0C9572051789FB2C0096CC71 /* GLHFTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLHFTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,14 @@
 			);
 			name = Resources;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		0C35539F178DB11400205835 /* Custom Loggers */ = {
+			isa = PBXGroup;
+			children = (
+				0C3553A0178DB13800205835 /* GLCustomLogs.h */,
+			);
+			name = "Custom Loggers";
 			sourceTree = "<group>";
 		};
 		0C48BFF5178BA89700D262FC /* Constants */ = {
@@ -273,6 +283,7 @@
 		0CA03E6D178CA4E90022B175 /* Log */ = {
 			isa = PBXGroup;
 			children = (
+				0C35539F178DB11400205835 /* Custom Loggers */,
 				0C239057178D0920005205A3 /* HTTP */,
 				0CA03E6E178CA4F50022B175 /* Formatters */,
 			);
@@ -432,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3553A1178DB28C00205835 /* GLCustomLogs.h in Sources */,
 				0C9572151789FB2C0096CC71 /* main.m in Sources */,
 				0C9572191789FB2C0096CC71 /* GLAppDelegate.m in Sources */,
 				0C957249178A033A0096CC71 /* GLVideosCollectionViewController.m in Sources */,

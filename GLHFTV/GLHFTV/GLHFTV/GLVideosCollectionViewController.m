@@ -7,6 +7,7 @@
 //
 
 #import <DDLog.h>
+#import "GLCustomLogs.h"
 
 #import "GLVideosCollectionViewController.h"
 #import "GLVideoCollectionViewCell.h"
@@ -17,7 +18,7 @@
 static NSString *const VideoCellIdentifier = @"VideoCell";
 
 #ifdef DEBUG
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = LOG_FLAG_VIDEO;
 #else
 static const int ddLogLevel = LOG_LEVEL_WARN;
 #endif
@@ -46,6 +47,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     DDLogInfo(@"SOME INFO");
     DDLogWarn(@"A WARNING");
     DDLogVerbose(@"VERBOSE");
+    DDLogVideo(@"Video Log");
     
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor purpleColor];
@@ -79,7 +81,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DDLogInfo(@"pressed something");
+    DDLogInfo(@"I LOVE YOU!");
 }
 
 @end
