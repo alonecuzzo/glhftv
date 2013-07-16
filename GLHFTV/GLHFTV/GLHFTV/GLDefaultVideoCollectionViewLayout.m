@@ -55,20 +55,7 @@ static int const ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (CGRect)frameForVideoCellAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSInteger row = indexPath.section / self.numberOfColumns;
-//    NSInteger column = indexPath.section % self.numberOfColumns;
-//    
-//    CGFloat spacingX = self.collectionView.bounds.size.width -
-//    self.itemInsets.left -
-//    self.itemInsets.right -
-//    (self.numberOfColumns * self.itemSize.width);
-//    
-//    if (self.numberOfColumns > 1) spacingX = spacingX / (self.numberOfColumns - 1);
-//    
-//    CGFloat originX = floorf(self.itemInsets.left + (self.itemSize.width + spacingX) * column);
-//
     int sectionOffset = 0;
-    DDLogVerbose(@"section: %d", indexPath.section);
     if (indexPath.section > 0) {
         for (int i = 1; i < self.collectionView.numberOfSections; i++) {
             if ((indexPath.section - i) >= 0) {
@@ -77,10 +64,7 @@ static int const ddLogLevel = LOG_LEVEL_VERBOSE;
         }
     }
     
-    DDLogVerbose(@"section offset: %d", sectionOffset);
-    
-    CGFloat originY = floor(self.itemInsets.top +
-                            (self.itemSize.height + self.interItemSpacingY) * (indexPath.row + sectionOffset));
+    CGFloat originY = floor(self.itemInsets.top + (self.itemSize.height + self.interItemSpacingY) * (indexPath.row + sectionOffset));
 
     CGFloat originX = kInset;
 

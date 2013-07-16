@@ -13,6 +13,7 @@
 #import "GLVideoCollectionViewCell.h"
 #import "GLDefaultVideoCollectionViewLayout.h"
 #import "GLColorHelper.h"
+#import "GLModel.h"
 
 
 static NSString *const VideoCellIdentifier = @"VideoCell";
@@ -28,6 +29,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 @end
 
 @implementation GLVideosCollectionViewController {
+    NSArray *_model;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,6 +44,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _model = [GLModel getModel];
     
     DDLogError(@"LOLZ AN ERROR");
     DDLogInfo(@"SOME INFO");
@@ -65,12 +69,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return 1;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 31;
+    return [_model count];
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
