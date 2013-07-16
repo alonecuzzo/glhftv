@@ -14,6 +14,7 @@
 #import "GLDefaultVideoCollectionViewLayout.h"
 #import "GLColorHelper.h"
 #import "GLModel.h"
+#import "GLVideoCellGenerator.h"
 
 
 static NSString *const VideoCellIdentifier = @"VideoCell";
@@ -30,6 +31,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 @implementation GLVideosCollectionViewController {
     NSArray *_model;
+    GLVideoCellGenerator *_generator;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -46,6 +48,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [super viewDidLoad];
     
     _model = [GLModel getModel];
+    _generator = [[GLVideoCellGenerator alloc] initWithCollection:self.collectionView];
+    _generator.cellReuseIdentifier = VideoCellIdentifier;
     
     DDLogError(@"LOLZ AN ERROR");
     DDLogInfo(@"SOME INFO");
@@ -79,7 +83,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    GLVideoCollectionViewCell *cell = (GLVideoCollectionViewCell*) [collectionView dequeueReusableCellWithReuseIdentifier:VideoCellIdentifier forIndexPath:indexPath];
+//    GLVideoCollectionViewCell *cell = (GLVideoCollectionViewCell*) [collectionView dequeueReusableCellWithReuseIdentifier:VideoCellIdentifier forIndexPath:indexPath];
+    GLVideoCollectionViewCell *cell = [_generator requestCellFromData:_model[indexPath.row] forIndexPath:indexPath];
     return cell;
 }
 

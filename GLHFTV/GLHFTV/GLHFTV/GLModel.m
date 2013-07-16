@@ -46,7 +46,7 @@ static NSString *const GLRaceTypeProtoss = @"GLRaceTypeProtoss";
                             @"Grubby",
                             GLRaceTypeProtoss,
                             GLRaceTypeProtoss,
-                            @"MLG Dallas",
+                            @"MLG Anaheim",
                             @3,
                             @"Madals",
                             @"iNControl",
@@ -64,7 +64,6 @@ static NSString *const GLRaceTypeProtoss = @"GLRaceTypeProtoss";
                             @"matchdate",
                             @"viewed"
                         ]]
-                       
                        ];
     
     return model;
