@@ -17,6 +17,7 @@
 +(UIColor*)glTerranRed;
 
 +(UIColor*)glBlack;
++(UIColor*)glBlue;
 
 +(UIColor*)glVideoFeedCellGray;
 +(UIColor*)glVideoFeedCellBackgroundGray;

@@ -33,6 +33,9 @@
 		0C957253178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C957252178A085F0096CC71 /* GLDefaultVideoCollectionViewLayout.m */; };
 		0C957255178A0B780096CC71 /* GLVideosCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C957254178A0B780096CC71 /* GLVideosCollectionViewController.xib */; };
 		0CA03E71178CA50F0022B175 /* GLCustomFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA03E70178CA50F0022B175 /* GLCustomFormatter.m */; };
+		0CD30D071795F0D20017CAA1 /* UIView+GCLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD30D061795F0D20017CAA1 /* UIView+GCLibrary.m */; };
+		0CD30D0A1795F49B0017CAA1 /* GLFontHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD30D091795F49B0017CAA1 /* GLFontHelper.m */; };
+		0CD30D0D1795F8270017CAA1 /* Avenir.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0CD30D0C1795F8270017CAA1 /* Avenir.ttc */; };
 		0CEEB0971795E0FF00D4D394 /* GLVideoCellGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEEB0961795E0FF00D4D394 /* GLVideoCellGenerator.m */; };
 		0CEEB09B1795E60400D4D394 /* GLVideoCellDefaultBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEEB09A1795E60400D4D394 /* GLVideoCellDefaultBuilder.m */; };
 		1FDCC5FC27C24E03ACEE7872 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C9E98B28B34CE88C70B04B /* libPods.a */; };
@@ -89,6 +92,11 @@
 		0C957254178A0B780096CC71 /* GLVideosCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLVideosCollectionViewController.xib; sourceTree = "<group>"; };
 		0CA03E6F178CA50F0022B175 /* GLCustomFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLCustomFormatter.h; path = GLHFTV/GLCustomFormatter.h; sourceTree = "<group>"; };
 		0CA03E70178CA50F0022B175 /* GLCustomFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLCustomFormatter.m; path = GLHFTV/GLCustomFormatter.m; sourceTree = "<group>"; };
+		0CD30D051795F0D20017CAA1 /* UIView+GCLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GCLibrary.h"; sourceTree = "<group>"; };
+		0CD30D061795F0D20017CAA1 /* UIView+GCLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GCLibrary.m"; sourceTree = "<group>"; };
+		0CD30D081795F49B0017CAA1 /* GLFontHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLFontHelper.h; path = GLHFTV/GLFontHelper.h; sourceTree = "<group>"; };
+		0CD30D091795F49B0017CAA1 /* GLFontHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLFontHelper.m; path = GLHFTV/GLFontHelper.m; sourceTree = "<group>"; };
+		0CD30D0C1795F8270017CAA1 /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttc; sourceTree = "<group>"; };
 		0CEEB0951795E0FF00D4D394 /* GLVideoCellGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLVideoCellGenerator.h; path = GLHFTV/GLVideoCellGenerator.h; sourceTree = "<group>"; };
 		0CEEB0961795E0FF00D4D394 /* GLVideoCellGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLVideoCellGenerator.m; path = GLHFTV/GLVideoCellGenerator.m; sourceTree = "<group>"; };
 		0CEEB0991795E60400D4D394 /* GLVideoCellDefaultBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLVideoCellDefaultBuilder.h; path = GLHFTV/GLVideoCellDefaultBuilder.h; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 		0C23905E178D1141005205A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0CD30D0B1795F8090017CAA1 /* Fonts */,
 				0C23905F178D1154005205A3 /* Web */,
 			);
 			name = Resources;
@@ -152,6 +161,8 @@
 		0C3553A2178DE7DD00205835 /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				0CD30D081795F49B0017CAA1 /* GLFontHelper.h */,
+				0CD30D091795F49B0017CAA1 /* GLFontHelper.m */,
 			);
 			name = Text;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 		0C48BFF5178BA89700D262FC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0CD30D041795F0C50017CAA1 /* Views */,
 				0C3553A3178DECE000205835 /* Constants */,
 				0C3553A2178DE7DD00205835 /* Text */,
 				0C48BFF6178BA9F200D262FC /* Colors */,
@@ -347,6 +359,23 @@
 			name = Formatters;
 			sourceTree = "<group>";
 		};
+		0CD30D041795F0C50017CAA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CD30D051795F0D20017CAA1 /* UIView+GCLibrary.h */,
+				0CD30D061795F0D20017CAA1 /* UIView+GCLibrary.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0CD30D0B1795F8090017CAA1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0CD30D0C1795F8270017CAA1 /* Avenir.ttc */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		0CEEB0941795E04F00D4D394 /* Generators */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +474,7 @@
 				0C95721F1789FB2C0096CC71 /* Default-568h@2x.png in Resources */,
 				0C957255178A0B780096CC71 /* GLVideosCollectionViewController.xib in Resources */,
 				0C239060178D1154005205A3 /* Web in Resources */,
+				0CD30D0D1795F8270017CAA1 /* Avenir.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +553,8 @@
 				0C3553AA178E05BB00205835 /* GLModel.m in Sources */,
 				0CEEB0971795E0FF00D4D394 /* GLVideoCellGenerator.m in Sources */,
 				0CEEB09B1795E60400D4D394 /* GLVideoCellDefaultBuilder.m in Sources */,
+				0CD30D071795F0D20017CAA1 /* UIView+GCLibrary.m in Sources */,
+				0CD30D0A1795F49B0017CAA1 /* GLFontHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

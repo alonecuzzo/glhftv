@@ -7,3 +7,5 @@
 //
 
 #define kInset 10.0f
+
+#define kVideoCellInset 15.0f

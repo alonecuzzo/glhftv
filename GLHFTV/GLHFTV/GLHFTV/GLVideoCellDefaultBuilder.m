@@ -20,6 +20,8 @@
 
 -(GLVideoCellDefaultBuilder*)buildVsTitle
 {
+    [_cell setVsTitleLineOne:[_cell.data objectForKey:@"player1name"]];
+    [_cell setVsTitleLineTwo:[_cell.data objectForKey:@"player2name"]];
     return self;
 }
 

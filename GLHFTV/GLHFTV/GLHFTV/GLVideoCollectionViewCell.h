@@ -16,5 +16,7 @@ typedef NSUInteger GLVideoCollectionCellType;
 @interface GLVideoCollectionViewCell : UICollectionViewCell
 
 @property(strong, nonatomic) NSDictionary *data;
+@property(strong, nonatomic) NSString *vsTitleLineOne;
+@property(strong, nonatomic) NSString *vsTitleLineTwo;
 
 @end

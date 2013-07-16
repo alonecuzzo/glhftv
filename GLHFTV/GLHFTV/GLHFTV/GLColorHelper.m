@@ -40,4 +40,9 @@
     return [UIColor colorWithRed:54/255.0f green:47/255.0f blue:45/255.0f alpha:1.0f]; //362f2d
 }
 
++(UIColor*)glBlue
+{
+    return [UIColor colorWithRed:81/255.0f green:149/255.0f blue:190/255.0f alpha:1.0f]; //5195be
+}
+
 @end
