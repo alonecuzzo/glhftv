@@ -14,7 +14,7 @@
 @property(nonatomic, assign) GLVideoCollectionCellType type;
 @property(strong, nonatomic) NSString *cellReuseIdentifier;
 
--(id)initWithCollection:(UICollectionView *)collectionView;
+-(id)initWithCollectionView:(UICollectionView *)collectionView;
 -(id)requestCellFromData:(id)data forIndexPath:(NSIndexPath*)indexPath;
 
 @end

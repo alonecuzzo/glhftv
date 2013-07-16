@@ -34,6 +34,7 @@
 		0C957255178A0B780096CC71 /* GLVideosCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C957254178A0B780096CC71 /* GLVideosCollectionViewController.xib */; };
 		0CA03E71178CA50F0022B175 /* GLCustomFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA03E70178CA50F0022B175 /* GLCustomFormatter.m */; };
 		0CEEB0971795E0FF00D4D394 /* GLVideoCellGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEEB0961795E0FF00D4D394 /* GLVideoCellGenerator.m */; };
+		0CEEB09B1795E60400D4D394 /* GLVideoCellDefaultBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEEB09A1795E60400D4D394 /* GLVideoCellDefaultBuilder.m */; };
 		1FDCC5FC27C24E03ACEE7872 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C9E98B28B34CE88C70B04B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,8 @@
 		0CA03E70178CA50F0022B175 /* GLCustomFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLCustomFormatter.m; path = GLHFTV/GLCustomFormatter.m; sourceTree = "<group>"; };
 		0CEEB0951795E0FF00D4D394 /* GLVideoCellGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLVideoCellGenerator.h; path = GLHFTV/GLVideoCellGenerator.h; sourceTree = "<group>"; };
 		0CEEB0961795E0FF00D4D394 /* GLVideoCellGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLVideoCellGenerator.m; path = GLHFTV/GLVideoCellGenerator.m; sourceTree = "<group>"; };
+		0CEEB0991795E60400D4D394 /* GLVideoCellDefaultBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLVideoCellDefaultBuilder.h; path = GLHFTV/GLVideoCellDefaultBuilder.h; sourceTree = "<group>"; };
+		0CEEB09A1795E60400D4D394 /* GLVideoCellDefaultBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLVideoCellDefaultBuilder.m; path = GLHFTV/GLVideoCellDefaultBuilder.m; sourceTree = "<group>"; };
 		6F550413250D48D29B4C799E /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -300,6 +303,7 @@
 		0C95724B178A04B40096CC71 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				0CEEB0981795E5CF00D4D394 /* Builders */,
 				0CEEB0941795E04F00D4D394 /* Generators */,
 				0C95724D178A04F30096CC71 /* GLVideoCollectionViewCell.h */,
 				0C95724E178A04F30096CC71 /* GLVideoCollectionViewCell.m */,
@@ -350,6 +354,15 @@
 				0CEEB0961795E0FF00D4D394 /* GLVideoCellGenerator.m */,
 			);
 			name = Generators;
+			sourceTree = "<group>";
+		};
+		0CEEB0981795E5CF00D4D394 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				0CEEB0991795E60400D4D394 /* GLVideoCellDefaultBuilder.h */,
+				0CEEB09A1795E60400D4D394 /* GLVideoCellDefaultBuilder.m */,
+			);
+			name = Builders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +522,7 @@
 				0C23905D178D094C005205A3 /* WebSocketLogger.m in Sources */,
 				0C3553AA178E05BB00205835 /* GLModel.m in Sources */,
 				0CEEB0971795E0FF00D4D394 /* GLVideoCellGenerator.m in Sources */,
+				0CEEB09B1795E60400D4D394 /* GLVideoCellDefaultBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,12 +8,31 @@
 
 #import "GLVideoCellGenerator.h"
 #import "GLVideoCollectionViewCell.h"
+#import "GLVideoCellDefaultBuilder.h"
 
 @implementation GLVideoCellGenerator {
     UICollectionView *_collectionView;
+    GLVideoCellDefaultBuilder *_cellBuilder;
 }
 
--(id)initWithCollection:(UICollectionView *)collectionView
+#pragma mark - Builder Stuff
+
+-(GLVideoCollectionViewCell*)buildDefaultCell:(NSString*)identifier forIndexPath:(NSIndexPath*)indexPath withData:(id)data
+{
+    _cellBuilder = [[GLVideoCellDefaultBuilder alloc] init];
+    [_cellBuilder buildNewCell:identifier forIndexPath:indexPath forCollectionView:_collectionView];
+    [_cellBuilder cell].data = (NSDictionary*)data;
+    [_cellBuilder buildBackgroundView];
+    [_cellBuilder buildVsTitle];
+    [_cellBuilder buildCastersTitle];
+    [_cellBuilder buildEventTitle];
+    [_cellBuilder buildRaceChips];
+    return [_cellBuilder cell];
+}
+
+#pragma mark - Initilization Stuff
+
+-(id)initWithCollectionView:(UICollectionView *)collectionView
 {
     if(self = [super init]) {
         _collectionView = collectionView;
@@ -23,10 +42,8 @@
 
 -(id)requestCellFromData:(id)data forIndexPath:(NSIndexPath*)indexPath
 {
-    GLVideoCollectionViewCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:self.cellReuseIdentifier forIndexPath:indexPath];
-   
-    //some processing etc
-    return cell;
+    return [self buildDefaultCell:self.cellReuseIdentifier forIndexPath:indexPath withData:data];
+//    return [_collectionView dequeueReusableCellWithReuseIdentifier:self.cellReuseIdentifier forIndexPath:indexPath];
 }
 
 @end

@@ -48,7 +48,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [super viewDidLoad];
     
     _model = [GLModel getModel];
-    _generator = [[GLVideoCellGenerator alloc] initWithCollection:self.collectionView];
+    _generator = [[GLVideoCellGenerator alloc] initWithCollectionView:self.collectionView];
     _generator.cellReuseIdentifier = VideoCellIdentifier;
     
     DDLogError(@"LOLZ AN ERROR");
