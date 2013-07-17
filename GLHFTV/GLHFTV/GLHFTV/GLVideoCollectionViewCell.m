@@ -13,12 +13,15 @@
 #import "Globals.h"
 #import "UIView+GCLibrary.h"
 #import "GLFontHelper.h"
+#import "GLRaceChipView.h"
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @implementation GLVideoCollectionViewCell {
     UILabel *_vsTitleLineOneLabel;
     UILabel *_vsTitleLineTwoLabel;
+    GLRaceChipView *_raceChipOne;
+    GLRaceChipView *_raceChipTwo;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -39,7 +42,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 -(void)setVsTitleLineOne:(NSString *)vsTitleLineOne
 {
-    _vsTitleLineOneLabel = [[UILabel alloc] initWithFrame:CGRectMake(kVideoCellInset, 50, 112, 30)];
+    _vsTitleLineOneLabel = [[UILabel alloc] initWithFrame:CGRectMake(kVideoCellInset, 50, 212, 30)];
     _vsTitleLineOneLabel.text = vsTitleLineOne;
     _vsTitleLineOneLabel.backgroundColor = [UIColor clearColor];
     _vsTitleLineOneLabel.textColor = [GLColorHelper glBlue];
@@ -56,6 +59,22 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     _vsTitleLineTwoLabel.textColor = [GLColorHelper glBlue];
     _vsTitleLineTwoLabel.font = [GLFontHelper getFont:GLFontTypeAvenirLight withSize:GLFontSizeLarge];
     [self.contentView addSubview:_vsTitleLineTwoLabel];
+}
+
+-(void)setRaceChipOneWithType:(GLRaceChipViewType)type
+{
+    _raceChipOne = [[GLRaceChipView alloc] initWithType:type];
+    [_raceChipOne setX:266];
+    [_raceChipOne setY:kVideoCellInset];
+    [self.contentView addSubview:_raceChipOne];
+}
+
+-(void)setRaceChipTwoWithType:(GLRaceChipViewType)type
+{
+    _raceChipTwo = [[GLRaceChipView alloc] initWithType:type];
+    [_raceChipTwo setX:_raceChipOne.x + _raceChipOne.width + 4];
+    [_raceChipTwo setY:_raceChipOne.y];
+    [self.contentView addSubview:_raceChipTwo];
 }
 
 

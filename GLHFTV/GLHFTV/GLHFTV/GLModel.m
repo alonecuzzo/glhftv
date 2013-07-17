@@ -7,12 +7,9 @@
 //
 
 #import "GLModel.h"
+#import "Globals.h"
 
 @implementation GLModel
-
-static NSString *const GLRaceTypeZerg = @"GLRaceTypeZerg";
-static NSString *const GLRaceTypeTerran = @"GLRaceTypeTerran";
-static NSString *const GLRaceTypeProtoss = @"GLRaceTypeProtoss";
 
 +(NSArray*)getModel
 {
@@ -63,7 +60,31 @@ static NSString *const GLRaceTypeProtoss = @"GLRaceTypeProtoss";
                             @"caster2name",
                             @"matchdate",
                             @"viewed"
-                        ]]
+                        ]],
+                       
+                       [NSDictionary dictionaryWithObjects:@[
+                                @"LiquidHero",
+                                @"Polt",
+                                GLRaceTypeProtoss,
+                                GLRaceTypeTerran,
+                                @"MLG Anaheim",
+                                @3,
+                                @"Madals",
+                                @"iNControl",
+                                @"09.22.13",
+                                @YES
+                            ] forKeys:@[
+                                @"player1name",
+                                @"player2name",
+                                @"player1race",
+                                @"player2race",
+                                @"eventname",
+                                @"matchcount",
+                                @"caster1name",
+                                @"caster2name",
+                                @"matchdate",
+                                @"viewed"
+                            ]]
                        ];
     
     return model;

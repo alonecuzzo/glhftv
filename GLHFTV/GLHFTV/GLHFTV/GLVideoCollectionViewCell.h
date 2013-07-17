@@ -12,11 +12,15 @@ enum {
 typedef NSUInteger GLVideoCollectionCellType;
 
 #import <UIKit/UIKit.h>
+#import "GLRaceChipView.h"
 
 @interface GLVideoCollectionViewCell : UICollectionViewCell
 
 @property(strong, nonatomic) NSDictionary *data;
 @property(strong, nonatomic) NSString *vsTitleLineOne;
 @property(strong, nonatomic) NSString *vsTitleLineTwo;
+
+-(void)setRaceChipOneWithType:(GLRaceChipViewType)type;
+-(void)setRaceChipTwoWithType:(GLRaceChipViewType)type;
 
 @end

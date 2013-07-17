@@ -7,6 +7,8 @@
 //
 
 #import "GLVideoCellDefaultBuilder.h"
+#import "GLRaceChipView.h"
+#import "Globals.h"
 
 @implementation GLVideoCellDefaultBuilder {
     GLVideoCollectionViewCell *_cell;
@@ -37,6 +39,30 @@
 
 -(GLVideoCellDefaultBuilder*)buildRaceChips
 {
+    GLRaceChipViewType chipOneType;
+    GLRaceChipViewType chipTwoType;
+    NSString *playerOneType = [[_cell data] objectForKey:@"player1race"];
+    NSString *playerTwoType = [[_cell data] objectForKey:@"player2race"];
+    
+    if ([playerOneType isEqualToString:GLRaceTypeZerg]) {
+        chipOneType = GLRaceChipViewTypeZerg;
+    } else if([playerOneType isEqualToString:GLRaceTypeTerran]) {
+        chipOneType = GLRaceChipViewTypeTerran;
+    } else {
+        chipOneType = GLRaceChipViewTypeProtoss;
+    }
+    
+    if ([playerTwoType isEqualToString:GLRaceTypeZerg]) {
+        chipTwoType = GLRaceChipViewTypeZerg;
+    } else if([playerTwoType isEqualToString:GLRaceTypeTerran]) {
+        chipTwoType = GLRaceChipViewTypeTerran;
+    } else {
+        chipTwoType = GLRaceChipViewTypeProtoss;
+    }
+    
+    [_cell setRaceChipOneWithType:chipOneType];
+    [_cell setRaceChipTwoWithType:chipTwoType];
+    
     return self;
 }
 

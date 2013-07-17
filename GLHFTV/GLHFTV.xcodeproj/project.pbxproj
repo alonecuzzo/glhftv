@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C19B0951796212700926B6C /* GLRaceChipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19B0941796212700926B6C /* GLRaceChipView.m */; };
 		0C23905C178D094C005205A3 /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C239059178D094C005205A3 /* MyHTTPConnection.m */; };
 		0C23905D178D094C005205A3 /* WebSocketLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23905B178D094C005205A3 /* WebSocketLogger.m */; };
 		0C239060178D1154005205A3 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 0C23905F178D1154005205A3 /* Web */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		04C9E98B28B34CE88C70B04B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C19B0931796212700926B6C /* GLRaceChipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLRaceChipView.h; path = GLHFTV/GLRaceChipView.h; sourceTree = "<group>"; };
+		0C19B0941796212700926B6C /* GLRaceChipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLRaceChipView.m; path = GLHFTV/GLRaceChipView.m; sourceTree = "<group>"; };
 		0C239058178D094C005205A3 /* MyHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHTTPConnection.h; sourceTree = "<group>"; };
 		0C239059178D094C005205A3 /* MyHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHTTPConnection.m; sourceTree = "<group>"; };
 		0C23905A178D094C005205A3 /* WebSocketLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocketLogger.h; sourceTree = "<group>"; };
@@ -129,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C19B092179620F500926B6C /* Chips */ = {
+			isa = PBXGroup;
+			children = (
+				0C19B0931796212700926B6C /* GLRaceChipView.h */,
+				0C19B0941796212700926B6C /* GLRaceChipView.m */,
+			);
+			name = Chips;
+			sourceTree = "<group>";
+		};
 		0C239057178D0920005205A3 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +319,7 @@
 		0C95724A178A04AD0096CC71 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C19B092179620F500926B6C /* Chips */,
 				0C95724C178A04C40096CC71 /* Cells */,
 			);
 			name = Views;
@@ -555,6 +568,7 @@
 				0CEEB09B1795E60400D4D394 /* GLVideoCellDefaultBuilder.m in Sources */,
 				0CD30D071795F0D20017CAA1 /* UIView+GCLibrary.m in Sources */,
 				0CD30D0A1795F49B0017CAA1 /* GLFontHelper.m in Sources */,
+				0C19B0951796212700926B6C /* GLRaceChipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
